@@ -1,0 +1,11 @@
+.main{
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 550px) {        
+    .main{
+        background: linear-gradient(167.9deg, #FC66A4 0%, #993CFF 98.7%);
+        opacity: 0.8;
+    }
+}

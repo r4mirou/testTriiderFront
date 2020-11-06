@@ -1,0 +1,102 @@
+.container{
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+.more{
+    position: absolute;
+    top: 120px;
+    right: 3vw;
+    transition: all .1s;
+}
+.more:active{transform: scale(.90);}
+.less{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 3vw;
+    transition: all .1s;
+}
+.less:active{transform: scale(.9);}
+.box{
+    width: 80vw;
+    min-height: 250px;
+    border-radius: 5px;
+    background:white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.left {
+    margin-left: -75vw;
+    pointer-events: none;
+}
+.right{
+    margin-Right: -75vw;
+    pointer-events: none;
+}
+.wrap{    
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    .container{height: 70vh;}
+    .more{right: 1.5vw;}
+    .less{left: 1.5vw;}
+}
+
+@media screen and (max-width: 550px) {
+    .container{height: 70vh;}
+    .left{pointer-events: fill;}
+    .right{pointer-events: fill;}
+    .more{visibility: hidden;}
+    .less{visibility: hidden;}
+    .box{
+        background: #FFF;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.17);
+    }
+}
+
+.slideLeft{
+    position:relative;
+    animation:slideLeft .7s ease-out;
+}
+@keyframes slideLeft{
+    from{
+        left:-700px;
+        opacity:0;
+    }
+    50%{opacity:0.4;}
+    90%{
+        transform: skew(-10deg);
+      }
+    to{
+        left:0;
+        opacity:1;
+    }
+}
+
+.slideRight{
+    position:relative;
+    animation:slideRight .7s ease-out
+}
+@keyframes slideRight{
+    from{
+        right:-700px;
+        opacity:0
+    }
+    50%{opacity:0.4;}
+    90%{
+        transform: skew(-10deg);
+      }
+    to{
+        right:0;
+        opacity:1
+    }
+}

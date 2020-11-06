@@ -1,0 +1,14 @@
+.select{
+    width: 100%;
+    height: 32px;
+    color: #888;
+    font-size: medium;
+    border-radius: 2px;
+    border: 1px solid #CCCCCC;
+    background: #FFF;
+}
+.select:focus{outline-color: #F5A7D4;}
+.select option{
+    background: #FFF;
+    color: #F5A7D4;
+}
