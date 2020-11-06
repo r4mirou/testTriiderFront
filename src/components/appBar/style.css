@@ -6,7 +6,6 @@
 
 @media screen and (max-width: 550px) {
     .bar{
-        height: 10px;
-        visibility: hidden;
+        display: none;
     }
 }

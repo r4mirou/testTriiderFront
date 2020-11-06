@@ -91,7 +91,7 @@ export default () => {
                     setMessageAlert(false)
                 }}>X</div>
             </div>
-            {!!setMessageAlert && <div className={'alert'}>{messageAlert}</div>}
+            {!!messageAlert && <div className={'alert'}>{messageAlert}</div>}
             <form className='form' onSubmit={(e) => submitHandler(e)}>
                 <div className={'check-container'}>
                     <CheckBox name={'Evento Bloqueante'} internRef={blockRef} />

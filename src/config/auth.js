@@ -1,1 +1,1 @@
-export const isAuthenticated = () => true;
+export const isAuthenticated = () => {return !!localStorage.getItem('tknTriider')};

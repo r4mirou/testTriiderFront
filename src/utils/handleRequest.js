@@ -7,9 +7,9 @@ const POST = async (data) => {
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYwMzIwMTczMH0.mkIz9wKfKhrM6_IXsLDHdJPBvGbf13tKILEoAHpnDLc'
+            'Authorization': `Bearer ${localStorage.getItem('tknTriider')}`
         },
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
+        body: JSON.stringify(data)
     });
 
     return await res.json(); 

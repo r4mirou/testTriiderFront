@@ -1,9 +1,15 @@
 import React from 'react';
 import './style.css';
 
-export default (props) => {
+const Input = (props) => {
     return <div>
         <div className={'desc'}>{props.label}</div>
-        <input type="text" className={'input'} ref={props.internRef}/>
+        <input type={props.type} className={'input'} ref={props.internRef}/>
     </div>
 }
+
+Input.defaultProps = {
+    type: 'text',
+}
+
+export default Input;

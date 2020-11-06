@@ -1,0 +1,97 @@
+.container-login{
+    width: 100vw;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background: #E5E5E5;    
+}
+.box-left{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url('../../images/unsplash.png'); /*fallback*/
+    background-image: linear-gradient(167.9deg, rgba(252, 102, 164,.8) 0%, rgba(153, 60, 255,.8) 98.7%),url('../../images/unsplash.png');
+}
+.box-right{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 100px);
+    height: 100%;
+    padding: 20px 30px;
+    align-items: left;
+    justify-content: center;
+
+}
+.form-login{
+    position: relative;
+    width: 70%;
+    display: table;
+}
+.form-login > :not(:last-child) {margin-top: 5vh;}
+.form-login > :last-child {margin-top: 7vh;}
+.form-login > :first-child {margin: 20px 0 0 0;}
+.options-login{width: 70%;}
+.recovery-pass{
+    text-align: right;
+    margin:2vh 0 5vh 0;
+    font-size: 11px;
+    color: #9D9B9B;
+}
+.no-account{
+    text-align: center;
+    color: #565656;
+    font-size: 12px;
+    margin: 5vh 0 5vh 0;
+}
+.create-account{
+    text-align: center;
+    color: #F5A7D4;
+    font-size: 16px;
+    margin: 5vh 0 5vh 0;
+}
+.alert-login{
+    position: absolute;
+    top:225px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 13px;
+    /* background: rgba(255,0,0,.5); */
+}
+
+@media screen and (max-width: 550px) {
+    .box-left{display: none;}
+    .box-right{
+        align-items: center;
+        flex: 1;
+        width: 100%;
+        height: auto;
+    }
+    .options-login{width: 100%;}
+    .wrap-login{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+        background: white;
+        border-radius: 5px;
+        padding: 20px;
+        /* margin: ; */
+    }
+    .title-login{display: none;}
+    .form-login{
+        width: 100%;
+    }    
+    .container-login{
+        height: 100vh;
+        background-size: cover;
+        background-image: url('../../images/unsplash.png');
+        background-image: linear-gradient(167.9deg, rgba(252, 102, 164,.8) 0%, rgba(153, 60, 255,.8) 98.7%),url('../../images/unsplash.png');
+
+    }
+    .alert-login{top:190px;}
+}

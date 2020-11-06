@@ -1,11 +1,12 @@
 .input{
     width: 100%;
-    height: 30px;
+    height: 35px;
     padding: 0 0 0 2px;
     color: #888;
     font-size: medium;
     border-radius: 2px;
-    border: 1px solid #CCCCCC;    
+    border: 1px solid #CCCCCC;  
+    background: transparent; 
 }
 .input:focus{outline-color: #F5A7D4;}
 .desc{
